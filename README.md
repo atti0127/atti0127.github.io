@@ -1,1 +1,1 @@
-# When Differential Attention Meets Vision Transformers
+# Diff-ViT
