@@ -1,4 +1,4 @@
-# jbs371 👋
+# atti0127 👋
 
 AI Researcher interested in **Computer Vision, Vision-Language Models, and Data-efficient Learning**.
 
@@ -28,4 +28,4 @@ Recently, I have been exploring:
 - Efficient and task-agnostic attention mechanisms
 - AI models for real-world vision applications
 
-📫 **Contact:** your-email@example.com
+📫 **Contact:** xlfkshrex@gmail.com
