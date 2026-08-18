@@ -9,9 +9,8 @@ I study how AI models can learn from **limited data**, adapt to **new classes an
 - 👁️ Computer Vision
 - 🖼️ Vision-Language Models
 - 🎯 Few-shot Learning
-- 🔄 Incremental / Continual Learning
-- 📊 Data-efficient Learning
-- 🔍 Object Detection & Segmentation
+- 🔄 Incremental Learning
+- 📊 Multimodal Learning
 - 🧠 Attention Mechanisms
 
 ### Tech
