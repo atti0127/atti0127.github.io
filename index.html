@@ -19,7 +19,7 @@
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: #222;
-      background: #fff;
+      background: #ffffff;
       line-height: 1.55;
     }
 
@@ -37,18 +37,18 @@
     ========================= */
 
     nav {
-      border-bottom: 1px solid #eee;
-      background: white;
+      background: #ffffff;
+      border-bottom: 1px solid #eeeeee;
     }
 
     .nav-inner {
       max-width: 980px;
-      margin: auto;
+      margin: 0 auto;
       padding: 18px 24px;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .nav-name {
@@ -58,23 +58,23 @@
     }
 
     .nav-links a {
-      margin-left: 25px;
+      margin-left: 24px;
       color: #555;
       font-size: 15px;
     }
 
     /* =========================
-       Main
+       Main Layout
     ========================= */
 
     .container {
       max-width: 980px;
-      margin: auto;
-      padding: 45px 24px 80px;
+      margin: 0 auto;
+      padding: 50px 24px 80px;
     }
 
     section {
-      margin-bottom: 55px;
+      margin-bottom: 58px;
     }
 
     h1 {
@@ -84,8 +84,8 @@
     }
 
     h2 {
-      font-size: 25px;
       margin: 0 0 26px;
+      font-size: 25px;
       font-weight: 600;
     }
 
@@ -95,9 +95,9 @@
 
     .profile {
       display: flex;
-      gap: 40px;
+      gap: 42px;
       align-items: flex-start;
-      margin-bottom: 55px;
+      margin-bottom: 60px;
     }
 
     .profile-photo {
@@ -107,6 +107,7 @@
 
     .profile-photo img {
       width: 100%;
+      display: block;
       border-radius: 6px;
     }
 
@@ -120,12 +121,12 @@
     }
 
     .email {
-      color: #555;
-      margin: 5px 0 17px !important;
+      color: #666;
+      margin-top: 0 !important;
     }
 
     .profile-links {
-      margin-top: 18px;
+      margin-top: 20px;
     }
 
     .profile-links a {
@@ -139,8 +140,9 @@
 
     .edu-row {
       display: grid;
-      grid-template-columns: 125px 1fr;
-      margin-bottom: 18px;
+      grid-template-columns: 135px 1fr;
+      gap: 8px;
+      margin-bottom: 22px;
     }
 
     .edu-date {
@@ -158,69 +160,67 @@
     }
 
     /* =========================
-       News
-    ========================= */
-
-    .news-row {
-      display: grid;
-      grid-template-columns: 125px 1fr;
-      margin-bottom: 13px;
-    }
-
-    .news-date {
-      color: #666;
-      font-size: 15px;
-    }
-
-    /* =========================
-       Publications
+       Publications / Ongoing
     ========================= */
 
     .publication {
       display: grid;
       grid-template-columns: 230px 1fr;
       gap: 28px;
-      margin-bottom: 38px;
       align-items: center;
+      margin-bottom: 40px;
     }
 
     .publication-image img {
       width: 100%;
+      display: block;
+      border: 1px solid #eeeeee;
       border-radius: 5px;
-      border: 1px solid #eee;
     }
 
     .paper-title {
+      margin-bottom: 6px;
       font-size: 17px;
       font-weight: 600;
-      margin-bottom: 6px;
     }
 
     .venue {
-      font-style: italic;
       margin-bottom: 5px;
+      font-style: italic;
     }
 
     .authors {
+      margin-bottom: 8px;
       color: #444;
       font-size: 15px;
-      margin-bottom: 8px;
+    }
+
+    .paper-description {
+      margin: 8px 0;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .paper-links {
+      margin-top: 8px;
     }
 
     .paper-links a {
-      margin-right: 12px;
+      margin-right: 13px;
       font-size: 14px;
       font-weight: 500;
     }
 
     .status {
       display: inline-block;
+      margin-left: 7px;
       padding: 2px 7px;
-      background: #f1f1f1;
+      color: #555;
+      background: #f2f2f2;
       border-radius: 4px;
       font-size: 12px;
-      margin-left: 6px;
-      color: #555;
+      font-weight: 500;
+      vertical-align: 1px;
     }
 
     /* =========================
@@ -229,17 +229,20 @@
 
     .project-row {
       display: grid;
-      grid-template-columns: 125px 1fr;
-      margin-bottom: 24px;
+      grid-template-columns: 135px 1fr;
+      gap: 8px;
+      margin-bottom: 28px;
     }
 
     .project-date {
       color: #666;
+      font-size: 15px;
     }
 
     .project-title {
+      margin-bottom: 5px;
       font-weight: 600;
-      margin-bottom: 4px;
+      font-size: 16px;
     }
 
     .project-desc {
@@ -252,15 +255,15 @@
     ========================= */
 
     footer {
-      border-top: 1px solid #eee;
       padding: 28px;
-      text-align: center;
+      border-top: 1px solid #eeeeee;
       color: #888;
+      text-align: center;
       font-size: 13px;
     }
 
     /* =========================
-       Responsive
+       Mobile
     ========================= */
 
     @media (max-width: 700px) {
@@ -271,10 +274,11 @@
 
       .profile {
         flex-direction: column;
+        gap: 24px;
       }
 
       .profile-photo {
-        width: 160px;
+        width: 165px;
       }
 
       .publication {
@@ -282,19 +286,17 @@
       }
 
       .publication-image img {
-        max-width: 350px;
+        max-width: 360px;
       }
 
       .edu-row,
-      .news-row,
       .project-row {
         grid-template-columns: 1fr;
       }
 
       .edu-date,
-      .news-date,
       .project-date {
-        margin-bottom: 4px;
+        margin-bottom: 3px;
       }
     }
   </style>
@@ -303,22 +305,22 @@
 
 <body>
 
-<!-- =======================
+<!-- =========================================================
      NAVIGATION
-======================= -->
+========================================================= -->
 
 <nav>
   <div class="nav-inner">
 
-    <div class="nav-name">
+    <a class="nav-name" href="#">
       atti0127
-    </div>
+    </a>
 
     <div class="nav-links">
-      <a href="#news">News</a>
-      <a href="#publications">Research</a>
-      <a href="#projects">Projects</a>
       <a href="#education">Education</a>
+      <a href="#publications">Publications</a>
+      <a href="#ongoing">Ongoing Works</a>
+      <a href="#projects">Projects</a>
     </div>
 
   </div>
@@ -327,54 +329,77 @@
 
 <main class="container">
 
-<!-- =======================
+<!-- =========================================================
      PROFILE
-======================= -->
+========================================================= -->
 
 <section class="profile">
 
   <div class="profile-photo">
-    <img src="assets/profile.jpg" alt="Profile photo">
+
+    <!--
+      Upload your photo to:
+      assets/profile.jpg
+    -->
+
+    <img
+      src="assets/profile.jpg"
+      alt="Profile photo"
+    >
+
   </div>
+
 
   <div class="profile-info">
 
     <h1>Your Name</h1>
 
     <p class="email">
-      your-email@gmail.com
+      xlfkshrex@gmail.com
     </p>
 
     <p>
-      I am an AI researcher focusing on
+      I am an AI researcher interested in
       <strong>computer vision</strong>,
       <strong>vision-language models</strong>, and
       <strong>data-efficient learning</strong>.
     </p>
 
     <p>
-      My research aims to develop AI models that can learn effectively
-      from limited data, adapt to new classes and environments, and
-      maintain strong generalization in real-world scenarios.
+      My research focuses on developing AI models that can learn
+      effectively from limited data, adapt to new classes and environments,
+      and generalize reliably beyond their training distributions.
     </p>
 
     <p>
-      My current research interests include few-shot learning,
-      incremental learning, vision-language model adaptation,
-      multimodal learning, and efficient attention mechanisms.
+      I am particularly interested in
+      few-shot learning, incremental learning,
+      vision-language model adaptation, multimodal learning,
+      and attention mechanisms for visual recognition.
     </p>
 
     <div class="profile-links">
 
-      <a href="https://github.com/atti0127" target="_blank">
+      <a
+        href="https://github.com/atti0127"
+        target="_blank"
+      >
         GitHub
       </a>
 
-      <a href="#" target="_blank">
+      <!-- Replace # with your Google Scholar URL -->
+      <a
+        href="#"
+        target="_blank"
+      >
         Google Scholar
       </a>
 
-      <a href="#" target="_blank">
+      <!-- Replace # with your CV file or URL -->
+      <a
+        href="#"
+        target="_blank"
+      >
         CV
       </a>
 
@@ -385,13 +410,14 @@
 </section>
 
 
-<!-- =======================
+<!-- =========================================================
      EDUCATION
-======================= -->
+========================================================= -->
 
 <section id="education">
 
   <h2>Education</h2>
+
 
   <div class="edu-row">
 
@@ -401,10 +427,16 @@
 
     <div class="edu-content">
 
-      <strong>Chung-Ang University</strong>
+      <strong>
+        Chung-Ang University
+      </strong>
 
       <div>
-        M.S. in Computer Science / Artificial Intelligence
+        M.S. in Your Major
+      </div>
+
+      <div>
+        Seoul, Republic of Korea
       </div>
 
     </div>
@@ -420,10 +452,16 @@
 
     <div class="edu-content">
 
-      <strong>Your Undergraduate University</strong>
+      <strong>
+        Your Undergraduate University
+      </strong>
 
       <div>
         B.S. in Your Major
+      </div>
+
+      <div>
+        Republic of Korea
       </div>
 
     </div>
@@ -433,16 +471,16 @@
 </section>
 
 
-<!-- =======================
+<!-- =========================================================
      PUBLICATIONS
-======================= -->
+========================================================= -->
 
 <section id="publications">
 
   <h2>Publications</h2>
 
 
-  <!-- PLuG -->
+  <!-- ===================== PLuG ===================== -->
 
   <div class="publication">
 
@@ -455,7 +493,8 @@
 
     </div>
 
-    <div>
+
+    <div class="publication-content">
 
       <div class="paper-title">
         Pairwise Logit Gating (PLuG) Attention
@@ -466,12 +505,19 @@
       </div>
 
       <div class="authors">
-        Your Name, ...
+        Your Name, Co-authors
       </div>
 
       <div class="paper-links">
-        <a href="#">Paper</a>
-        <a href="#">Code</a>
+
+        <a href="#" target="_blank">
+          Paper
+        </a>
+
+        <a href="#" target="_blank">
+          Code
+        </a>
+
       </div>
 
     </div>
@@ -479,7 +525,7 @@
   </div>
 
 
-  <!-- NAPP -->
+  <!-- ===================== NAPP ===================== -->
 
   <div class="publication">
 
@@ -492,24 +538,32 @@
 
     </div>
 
-    <div>
+
+    <div class="publication-content">
 
       <div class="paper-title">
         NAPP
       </div>
 
       <div class="venue">
-        IEEE/CVF Winter Conference on Applications
-        of Computer Vision (WACV), 2026
+        IEEE/CVF Winter Conference on Applications of Computer Vision
+        (WACV), 2026
       </div>
 
       <div class="authors">
-        Your Name, ...
+        Your Name, Co-authors
       </div>
 
       <div class="paper-links">
-        <a href="#">Paper</a>
-        <a href="#">Code</a>
+
+        <a href="#" target="_blank">
+          Paper
+        </a>
+
+        <a href="#" target="_blank">
+          Code
+        </a>
+
       </div>
 
     </div>
@@ -517,7 +571,7 @@
   </div>
 
 
-  <!-- CEAL -->
+  <!-- ===================== CEAL ===================== -->
 
   <div class="publication">
 
@@ -530,32 +584,52 @@
 
     </div>
 
-    <div>
+
+    <div class="publication-content">
 
       <div class="paper-title">
         CEAL
       </div>
 
       <div class="venue">
-        IEEE International Conference on
-        Acoustics, Speech and Signal Processing (ICASSP), 2026
+        IEEE International Conference on Acoustics,
+        Speech and Signal Processing (ICASSP), 2026
       </div>
 
       <div class="authors">
-        Your Name, ...
+        Your Name, Co-authors
       </div>
 
       <div class="paper-links">
-        <a href="#">Paper</a>
-        <a href="#">Code</a>
+
+        <a href="#" target="_blank">
+          Paper
+        </a>
+
+        <a href="#" target="_blank">
+          Code
+        </a>
+
       </div>
 
     </div>
 
   </div>
 
+</section>
 
-  <!-- RoME -->
+
+<!-- =========================================================
+     ONGOING WORKS
+     Publications comes BEFORE this section.
+========================================================= -->
+
+<section id="ongoing">
+
+  <h2>Ongoing Works</h2>
+
+
+  <!-- ===================== RoME ===================== -->
 
   <div class="publication">
 
@@ -568,7 +642,8 @@
 
     </div>
 
-    <div>
+
+    <div class="publication-content">
 
       <div class="paper-title">
         RoME
@@ -582,15 +657,20 @@
       </div>
 
       <div class="authors">
-        Your Name, ...
+        Your Name, Co-authors
       </div>
+
+      <p class="paper-description">
+        Few-shot adaptation of vision-language models with an emphasis
+        on preserving generalization to novel classes under limited supervision.
+      </p>
 
     </div>
 
   </div>
 
 
-  <!-- CDA -->
+  <!-- ===================== CDA ===================== -->
 
   <div class="publication">
 
@@ -603,7 +683,8 @@
 
     </div>
 
-    <div>
+
+    <div class="publication-content">
 
       <div class="paper-title">
         CDA
@@ -617,25 +698,67 @@
       </div>
 
       <div class="authors">
-        Your Name, ...
+        Your Name, Co-authors
       </div>
+
+      <p class="paper-description">
+        Research on data-efficient visual learning and generalization
+        under limited training data.
+      </p>
 
     </div>
 
   </div>
 
 
+  <!--
+    Example for another ongoing project:
+
+  <div class="publication">
+
+    <div class="publication-image">
+      <img
+        src="assets/ongoing_attention.jpg"
+        alt="Ongoing attention research"
+      >
+    </div>
+
+    <div class="publication-content">
+
+      <div class="paper-title">
+        Efficient Task-Agnostic Attention
+        <span class="status">
+          Ongoing
+        </span>
+      </div>
+
+      <div class="venue">
+        Working Project
+      </div>
+
+      <p class="paper-description">
+        Exploring efficient and task-agnostic attention mechanisms
+        for general-purpose vision architectures.
+      </p>
+
+    </div>
+
+  </div>
+  -->
+
 </section>
 
 
-<!-- =======================
-     PROJECTS
-======================= -->
+<!-- =========================================================
+     PROJECT EXPERIENCES
+========================================================= -->
 
 <section id="projects">
 
   <h2>Project Experiences</h2>
 
+
+  <!-- ===================== Dronebot ===================== -->
 
   <div class="project-row">
 
@@ -650,15 +773,19 @@
       </div>
 
       <div class="project-desc">
-        Developed cross-domain few-shot object detection models
-        for extremely limited-data environments and explored
-        vision-language representations for novel object recognition.
+        Developed computer vision models for object recognition
+        in extremely limited-data environments.
+        I investigated cross-domain few-shot object detection and
+        vision-language representations to improve generalization
+        to novel target classes.
       </div>
 
     </div>
 
   </div>
 
+
+  <!-- ===================== Sewer Pipe ===================== -->
 
   <div class="project-row">
 
@@ -674,9 +801,10 @@
 
       <div class="project-desc">
         Developed object detection and instance segmentation models
-        for sewer pipe defect inspection and improved model performance
-        through annotation refinement, data augmentation, OCR masking,
-        and image inpainting.
+        for automated sewer pipe inspection.
+        Model performance was improved through annotation refinement,
+        additional data collection, OCR masking, image inpainting,
+        and data augmentation.
       </div>
 
     </div>
@@ -685,14 +813,12 @@
 
 </section>
 
-
 </main>
 
 
 <footer>
   © 2026 Your Name
 </footer>
-
 
 </body>
 </html>
