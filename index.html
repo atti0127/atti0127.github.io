@@ -140,22 +140,24 @@
     
     .education-entry {
       display: grid;
-      grid-template-columns: 300px 1fr;
-      gap: 45px;
+      grid-template-columns: 230px 1fr;  /* Publications와 동일 */
+      gap: 28px;                        /* Publications와 동일 */
       align-items: center;
-      margin-bottom: 45px;
+      margin-bottom: 24px;
     }
     
     .education-logo {
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 125px;
     }
     
     .education-logo img {
-      width: 100%;
-      max-width: 280px;
-      max-height: 130px;
+      width: auto;
+      height: auto;
+      max-width: 210px;
+      max-height: 115px;
       object-fit: contain;
     }
     
@@ -166,7 +168,7 @@
     .education-school {
       font-size: 18px;
       font-weight: 600;
-      margin-bottom: 8px;
+      margin-bottom: 7px;
     }
     
     .education-degree {
@@ -175,13 +177,18 @@
     }
     
     .education-degree li {
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
     
     .education-date {
       margin-left: 10px;
       color: #333;
       white-space: nowrap;
+    }
+    
+    /* Education과 Publications 사이 간격 */
+    #education {
+      margin-bottom: 42px;
     }
 
     /* =========================
