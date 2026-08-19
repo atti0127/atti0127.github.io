@@ -137,26 +137,51 @@
     /* =========================
        Education
     ========================= */
-
-    .edu-row {
+    
+    .education-entry {
       display: grid;
-      grid-template-columns: 135px 1fr;
-      gap: 8px;
-      margin-bottom: 22px;
+      grid-template-columns: 300px 1fr;
+      gap: 45px;
+      align-items: center;
+      margin-bottom: 45px;
     }
-
-    .edu-date {
-      color: #666;
-      font-size: 15px;
+    
+    .education-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
-    .edu-content strong {
+    
+    .education-logo img {
+      width: 100%;
+      max-width: 280px;
+      max-height: 130px;
+      object-fit: contain;
+    }
+    
+    .education-content {
       font-size: 16px;
     }
-
-    .edu-content div {
-      color: #555;
-      margin-top: 3px;
+    
+    .education-school {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .education-degree {
+      margin: 0;
+      padding-left: 22px;
+    }
+    
+    .education-degree li {
+      margin-bottom: 4px;
+    }
+    
+    .education-date {
+      margin-left: 10px;
+      color: #333;
+      white-space: nowrap;
     }
 
     /* =========================
@@ -466,42 +491,72 @@
   <h2>Education</h2>
 
 
-  <div class="edu-row">
+  <!-- ===================== Chung-Ang University ===================== -->
 
-    <div class="edu-date">
-      2024 – 2026
+  <div class="education-entry">
+
+    <div class="education-logo">
+
+      <img
+        src="assets/cau.jpg"
+        alt="Chung-Ang University"
+      >
+
     </div>
 
-    <div class="edu-content">
 
-      <strong>
-        Chung-Ang University
-      </strong>
+    <div class="education-content">
 
-      <div>
-        M.S. in Dept of Artificial Intelligence
+      <div class="education-school">
+        Chung-Ang University, Seoul, Korea
       </div>
+
+      <ul class="education-degree">
+
+        <li>
+          M.S. in Artificial Intelligence
+          <span class="education-date">
+            (Mar. 2024 – Feb. 2026)
+          </span>
+        </li>
+
+      </ul>
 
     </div>
 
   </div>
 
 
-  <div class="edu-row">
+  <!-- ===================== Kyung Hee University ===================== -->
 
-    <div class="edu-date">
-      2016 – 2023
+  <div class="education-entry">
+
+    <div class="education-logo">
+
+      <img
+        src="assets/khu.jpg"
+        alt="Kyung Hee University"
+      >
+
     </div>
 
-    <div class="edu-content">
 
-      <strong>
-        Kyung Hee University
-      </strong>
+    <div class="education-content">
 
-      <div>
-        B.S. in Dept of Astronomy & Space Science
+      <div class="education-school">
+        Kyung Hee University, Yongin, Korea
       </div>
+
+      <ul class="education-degree">
+
+        <li>
+          B.S. in Astronomy &amp; Space Science
+          <span class="education-date">
+            (Mar. 2016 – Feb. 2023)
+          </span>
+        </li>
+
+      </ul>
 
     </div>
 
