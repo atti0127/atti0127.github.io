@@ -251,6 +251,60 @@
     }
 
     /* =========================
+       Image Lightbox
+    ========================= */
+
+    .publication-image img {
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+    }
+
+    .publication-image img:hover {
+      transform: scale(1.02);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.88);
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 38px;
+      font-weight: 300;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .lightbox-close:hover {
+      opacity: 0.7;
+    }
+
+    /* =========================
        Footer
     ========================= */
 
@@ -891,6 +945,78 @@
 <footer>
   © 2026 Dongheon Lee
 </footer>
+
+
+<!-- =========================================================
+     IMAGE LIGHTBOX
+========================================================= -->
+
+<div id="lightbox" class="lightbox">
+
+  <span class="lightbox-close">&times;</span>
+
+  <img
+    id="lightbox-img"
+    src=""
+    alt="Expanded publication figure"
+  >
+
+</div>
+
+
+<script>
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeButton = document.querySelector(".lightbox-close");
+
+  const publicationImages =
+    document.querySelectorAll(".publication-image img");
+
+  publicationImages.forEach((img) => {
+
+    img.addEventListener("click", () => {
+
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+
+      lightbox.classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    });
+
+  });
+
+
+  function closeLightbox() {
+
+    lightbox.classList.remove("active");
+
+    document.body.style.overflow = "";
+
+  }
+
+
+  closeButton.addEventListener("click", closeLightbox);
+
+
+  lightbox.addEventListener("click", (event) => {
+
+    if (event.target === lightbox) {
+      closeLightbox();
+    }
+
+  });
+
+
+  document.addEventListener("keydown", (event) => {
+
+    if (event.key === "Escape") {
+      closeLightbox();
+    }
+
+  });
+</script>
 
 </body>
 </html>
