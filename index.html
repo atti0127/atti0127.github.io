@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>jbs371</title>
+  <title>atti0127</title>
 
   <style>
     * {
@@ -16,12 +16,11 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Helvetica, Arial, sans-serif;
       margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
-      background: #ffffff;
-      line-height: 1.65;
+      background: #fff;
+      line-height: 1.55;
     }
 
     a {
@@ -33,277 +32,293 @@
       text-decoration: underline;
     }
 
-    /* Navigation */
+    /* =========================
+       Navigation
+    ========================= */
+
     nav {
-      width: 100%;
-      border-bottom: 1px solid #e5e5e5;
-      background: rgba(255, 255, 255, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      border-bottom: 1px solid #eee;
+      background: white;
     }
 
-    .nav-container {
-      max-width: 900px;
+    .nav-inner {
+      max-width: 980px;
       margin: auto;
-      padding: 14px 24px;
+      padding: 18px 24px;
+
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .nav-name {
-      font-size: 18px;
-      font-weight: 600;
       color: #222;
+      font-size: 20px;
+      font-weight: 600;
     }
 
     .nav-links a {
-      margin-left: 24px;
+      margin-left: 25px;
       color: #555;
       font-size: 15px;
     }
 
-    /* Main content */
+    /* =========================
+       Main
+    ========================= */
+
     .container {
-      max-width: 900px;
+      max-width: 980px;
       margin: auto;
-      padding: 55px 24px 80px;
+      padding: 45px 24px 80px;
     }
 
     section {
-      margin-bottom: 70px;
+      margin-bottom: 55px;
     }
 
     h1 {
-      font-size: 38px;
-      margin: 0 0 12px;
-      font-weight: 650;
+      margin: 0 0 8px;
+      font-size: 34px;
+      font-weight: 600;
     }
 
     h2 {
       font-size: 25px;
-      margin-bottom: 28px;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 8px;
+      margin: 0 0 26px;
       font-weight: 600;
     }
 
-    h3 {
-      margin: 0 0 6px;
-      font-size: 19px;
-    }
+    /* =========================
+       Profile
+    ========================= */
 
-    p {
-      margin: 8px 0;
-    }
-
-    /* About */
-    .about {
+    .profile {
       display: flex;
-      gap: 45px;
-      align-items: center;
+      gap: 40px;
+      align-items: flex-start;
+      margin-bottom: 55px;
     }
 
-    .about-text {
+    .profile-photo {
+      width: 210px;
+      flex-shrink: 0;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .profile-info {
       flex: 1;
     }
 
-    .profile-img {
-      width: 210px;
-      height: 210px;
-      border-radius: 8px;
-      object-fit: cover;
-      background: #eee;
+    .profile-info p {
+      margin: 12px 0;
+      font-size: 16px;
     }
 
-    .intro {
-      font-size: 17px;
+    .email {
+      color: #555;
+      margin: 5px 0 17px !important;
     }
 
-    .links {
+    .profile-links {
       margin-top: 18px;
     }
 
-    .links a {
-      margin-right: 16px;
+    .profile-links a {
+      margin-right: 18px;
       font-weight: 500;
     }
 
-    /* Research interests */
-    .interests {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+    /* =========================
+       Education
+    ========================= */
+
+    .edu-row {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      margin-bottom: 18px;
     }
 
-    .tag {
-      background: #f3f5f7;
-      border-radius: 6px;
-      padding: 7px 12px;
+    .edu-date {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .edu-content strong {
+      font-size: 16px;
+    }
+
+    .edu-content div {
+      color: #555;
+      margin-top: 3px;
+    }
+
+    /* =========================
+       News
+    ========================= */
+
+    .news-row {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      margin-bottom: 13px;
+    }
+
+    .news-date {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* =========================
+       Publications
+    ========================= */
+
+    .publication {
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 28px;
+      margin-bottom: 38px;
+      align-items: center;
+    }
+
+    .publication-image img {
+      width: 100%;
+      border-radius: 5px;
+      border: 1px solid #eee;
+    }
+
+    .paper-title {
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .venue {
+      font-style: italic;
+      margin-bottom: 5px;
+    }
+
+    .authors {
+      color: #444;
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .paper-links a {
+      margin-right: 12px;
       font-size: 14px;
-    }
-
-    /* Education */
-    .education-item {
-      margin-bottom: 26px;
-    }
-
-    .education-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 20px;
-    }
-
-    .date {
-      color: #777;
-      white-space: nowrap;
-      font-size: 14px;
-    }
-
-    .institution {
       font-weight: 500;
     }
 
-    .description {
+    .status {
+      display: inline-block;
+      padding: 2px 7px;
+      background: #f1f1f1;
+      border-radius: 4px;
+      font-size: 12px;
+      margin-left: 6px;
+      color: #555;
+    }
+
+    /* =========================
+       Projects
+    ========================= */
+
+    .project-row {
+      display: grid;
+      grid-template-columns: 125px 1fr;
+      margin-bottom: 24px;
+    }
+
+    .project-date {
+      color: #666;
+    }
+
+    .project-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .project-desc {
       color: #555;
       font-size: 15px;
     }
 
-    /* Projects */
-    .project {
-      display: flex;
-      gap: 25px;
-      margin-bottom: 40px;
-    }
-
-    .project-img {
-      width: 220px;
-      height: 140px;
-      object-fit: cover;
-      background: #eee;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-
-    .project-content {
-      flex: 1;
-    }
-
-    .project-title {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .project-meta {
-      color: #777;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    /* Publications */
-    .publication {
-      display: flex;
-      gap: 25px;
-      margin-bottom: 38px;
-    }
-
-    .publication-img {
-      width: 220px;
-      height: 130px;
-      object-fit: cover;
-      background: #eee;
-      border-radius: 6px;
-      flex-shrink: 0;
-    }
-
-    .publication-content {
-      flex: 1;
-    }
-
-    .venue {
-      display: inline-block;
-      font-size: 13px;
-      font-weight: 600;
-      background: #eeeeee;
-      padding: 3px 8px;
-      border-radius: 4px;
-      margin-bottom: 6px;
-    }
-
-    .paper-title {
-      font-weight: 600;
-      font-size: 17px;
-    }
-
-    .authors {
-      color: #555;
-      font-size: 14px;
-      margin: 5px 0;
-    }
-
-    .paper-links {
-      font-size: 14px;
-    }
+    /* =========================
+       Footer
+    ========================= */
 
     footer {
-      text-align: center;
-      color: #999;
-      font-size: 13px;
-      padding: 35px;
       border-top: 1px solid #eee;
+      padding: 28px;
+      text-align: center;
+      color: #888;
+      font-size: 13px;
     }
 
-    /* Mobile */
+    /* =========================
+       Responsive
+    ========================= */
+
     @media (max-width: 700px) {
 
       .nav-links {
         display: none;
       }
 
-      .about {
-        flex-direction: column-reverse;
-        align-items: flex-start;
+      .profile {
+        flex-direction: column;
       }
 
-      .profile-img {
-        width: 170px;
-        height: 170px;
+      .profile-photo {
+        width: 160px;
       }
 
-      .project,
       .publication {
-        flex-direction: column;
+        grid-template-columns: 1fr;
       }
 
-      .project-img,
-      .publication-img {
-        width: 100%;
-        height: auto;
-        max-height: 230px;
+      .publication-image img {
+        max-width: 350px;
       }
 
-      .education-header {
-        flex-direction: column;
-        gap: 0;
+      .edu-row,
+      .news-row,
+      .project-row {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-date,
+      .news-date,
+      .project-date {
+        margin-bottom: 4px;
       }
     }
   </style>
 </head>
 
+
 <body>
 
-<nav>
-  <div class="nav-container">
+<!-- =======================
+     NAVIGATION
+======================= -->
 
-    <a href="#about" class="nav-name">jbs371</a>
+<nav>
+  <div class="nav-inner">
+
+    <div class="nav-name">
+      atti0127
+    </div>
 
     <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
+      <a href="#news">News</a>
+      <a href="#publications">Research</a>
       <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
+      <a href="#education">Education</a>
     </div>
 
   </div>
@@ -312,394 +327,424 @@
 
 <main class="container">
 
-  <!-- ========================================================= -->
-  <!-- About                                                     -->
-  <!-- ========================================================= -->
+<!-- =======================
+     PROFILE
+======================= -->
 
-  <section id="about">
+<section class="profile">
 
-    <div class="about">
+  <div class="profile-photo">
+    <img src="assets/profile.jpg" alt="Profile photo">
+  </div>
 
-      <div class="about-text">
+  <div class="profile-info">
 
-        <h1>Hi, I'm jbs371 👋</h1>
+    <h1>Your Name</h1>
 
-        <p class="intro">
-          I am an AI researcher interested in
-          <strong>Computer Vision</strong>,
-          <strong>Vision-Language Models</strong>, and
-          <strong>Data-efficient Learning</strong>.
-        </p>
+    <p class="email">
+      your-email@gmail.com
+    </p>
 
-        <p>
-          My research focuses on building AI models that can learn
-          effectively from limited data, adapt to new classes and environments,
-          and generalize to real-world scenarios.
-        </p>
+    <p>
+      I am an AI researcher focusing on
+      <strong>computer vision</strong>,
+      <strong>vision-language models</strong>, and
+      <strong>data-efficient learning</strong>.
+    </p>
 
-        <p>
-          I am particularly interested in few-shot learning,
-          incremental learning, multimodal representation learning,
-          and foundation model adaptation for visual recognition.
-        </p>
+    <p>
+      My research aims to develop AI models that can learn effectively
+      from limited data, adapt to new classes and environments, and
+      maintain strong generalization in real-world scenarios.
+    </p>
 
-        <div class="links">
-          <a href="mailto:your-email@example.com">Email</a>
-          <a href="https://github.com/jbs371" target="_blank">GitHub</a>
+    <p>
+      My current research interests include few-shot learning,
+      incremental learning, vision-language model adaptation,
+      multimodal learning, and efficient attention mechanisms.
+    </p>
 
-          <!-- Add these when available -->
-          <!--
-          <a href="YOUR_GOOGLE_SCHOLAR_URL" target="_blank">
-            Google Scholar
-          </a>
-          -->
+    <div class="profile-links">
 
-          <!--
-          <a href="YOUR_CV_URL" target="_blank">
-            CV
-          </a>
-          -->
-        </div>
+      <a href="https://github.com/atti0127" target="_blank">
+        GitHub
+      </a>
 
+      <a href="#" target="_blank">
+        Google Scholar
+      </a>
+
+      <a href="#" target="_blank">
+        CV
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================
+     EDUCATION
+======================= -->
+
+<section id="education">
+
+  <h2>Education</h2>
+
+  <div class="edu-row">
+
+    <div class="edu-date">
+      YYYY – YYYY
+    </div>
+
+    <div class="edu-content">
+
+      <strong>Chung-Ang University</strong>
+
+      <div>
+        M.S. in Computer Science / Artificial Intelligence
       </div>
 
-      <!--
-        Put your profile image in:
-        assets/profile.jpg
-      -->
+    </div>
+
+  </div>
+
+
+  <div class="edu-row">
+
+    <div class="edu-date">
+      YYYY – YYYY
+    </div>
+
+    <div class="edu-content">
+
+      <strong>Your Undergraduate University</strong>
+
+      <div>
+        B.S. in Your Major
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================
+     NEWS
+======================= -->
+
+<section id="news">
+
+  <h2>News</h2>
+
+  <div class="news-row">
+
+    <div class="news-date">
+      2026
+    </div>
+
+    <div>
+      One paper accepted to
+      <strong>WACV 2026</strong>.
+    </div>
+
+  </div>
+
+
+  <div class="news-row">
+
+    <div class="news-date">
+      2026
+    </div>
+
+    <div>
+      One paper accepted to
+      <strong>ICASSP 2026</strong>.
+    </div>
+
+  </div>
+
+
+  <div class="news-row">
+
+    <div class="news-date">
+      2026
+    </div>
+
+    <div>
+      Our work on vision-language model adaptation
+      was submitted to <strong>WACV 2027</strong>.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =======================
+     PUBLICATIONS
+======================= -->
+
+<section id="publications">
+
+  <h2>Publications</h2>
+
+
+  <!-- PLuG -->
+
+  <div class="publication">
+
+    <div class="publication-image">
+
       <img
-        src="assets/profile.jpg"
-        alt="Profile photo"
-        class="profile-img"
+        src="assets/plug.jpg"
+        alt="PLuG Attention"
       >
 
     </div>
 
-  </section>
+    <div>
 
-
-  <!-- ========================================================= -->
-  <!-- Research Interests                                        -->
-  <!-- ========================================================= -->
-
-  <section id="research">
-
-    <h2>Research Interests</h2>
-
-    <div class="interests">
-
-      <span class="tag">Computer Vision</span>
-      <span class="tag">Vision-Language Models</span>
-      <span class="tag">Few-shot Learning</span>
-      <span class="tag">Incremental Learning</span>
-      <span class="tag">Data-efficient Learning</span>
-      <span class="tag">Multimodal Learning</span>
-      <span class="tag">Object Detection</span>
-      <span class="tag">Image Segmentation</span>
-      <span class="tag">Attention Mechanisms</span>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================================= -->
-  <!-- Education                                                  -->
-  <!-- ========================================================= -->
-
-  <section id="education">
-
-    <h2>Education</h2>
-
-    <div class="education-item">
-
-      <div class="education-header">
-
-        <div>
-          <h3>Chung-Ang University</h3>
-          <div class="institution">
-            M.S. in [Your Major]
-          </div>
-        </div>
-
-        <div class="date">
-          YYYY – YYYY
-        </div>
-
+      <div class="paper-title">
+        Pairwise Logit Gating (PLuG) Attention
       </div>
 
-      <p class="description">
-        Research focused on Computer Vision, Few-shot Learning,
-        and Vision-Language Models.
-      </p>
+      <div class="venue">
+        IEEE Access
+      </div>
 
-    </div>
+      <div class="authors">
+        Your Name, ...
+      </div>
 
-
-    <div class="education-item">
-
-      <div class="education-header">
-
-        <div>
-          <h3>[University Name]</h3>
-          <div class="institution">
-            B.S. in [Your Major]
-          </div>
-        </div>
-
-        <div class="date">
-          YYYY – YYYY
-        </div>
-
+      <div class="paper-links">
+        <a href="#">Paper</a>
+        <a href="#">Code</a>
       </div>
 
     </div>
 
-  </section>
+  </div>
 
 
-  <!-- ========================================================= -->
-  <!-- Projects                                                   -->
-  <!-- ========================================================= -->
+  <!-- NAPP -->
 
-  <section id="projects">
+  <div class="publication">
 
-    <h2>Projects</h2>
-
-
-    <!-- Project 1 -->
-
-    <div class="project">
+    <div class="publication-image">
 
       <img
-        src="assets/project-dronebot.jpg"
-        class="project-img"
-        alt="Dronebot project"
-      >
-
-      <div class="project-content">
-
-        <div class="project-title">
-          Few-shot Object Detection for Intelligent Surveillance
-        </div>
-
-        <div class="project-meta">
-          Computer Vision · Few-shot Learning · VLM
-        </div>
-
-        <p>
-          Developed an object detection framework for surveillance
-          environments where fewer than 10 training images were available
-          for each target class.
-        </p>
-
-        <p>
-          Explored cross-domain few-shot object detection and multimodal
-          learning using image and textual representations to improve
-          generalization to novel objects.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- Project 2 -->
-
-    <div class="project">
-
-      <img
-        src="assets/project-sewer.jpg"
-        class="project-img"
-        alt="Sewer inspection project"
-      >
-
-      <div class="project-content">
-
-        <div class="project-title">
-          AI-based Sewer Pipe Defect Inspection
-        </div>
-
-        <div class="project-meta">
-          Object Detection · Instance Segmentation · Data-centric AI
-        </div>
-
-        <p>
-          Developed computer vision models for detecting and segmenting
-          multiple types of defects in sewer inspection imagery.
-        </p>
-
-        <p>
-          Improved model performance through data refinement,
-          annotation correction, OCR masking, image inpainting,
-          and extensive data augmentation.
-        </p>
-
-      </div>
-
-    </div>
-
-
-    <!-- Project 3 -->
-
-    <div class="project">
-
-      <img
-        src="assets/project-vlm.jpg"
-        class="project-img"
-        alt="Vision language learning project"
-      >
-
-      <div class="project-content">
-
-        <div class="project-title">
-          Data-efficient Adaptation of Vision-Language Models
-        </div>
-
-        <div class="project-meta">
-          VLM · CLIP · Few-shot Learning
-        </div>
-
-        <p>
-          Studied methods for adapting pretrained vision-language models
-          to downstream visual recognition tasks using only a small number
-          of labeled examples.
-        </p>
-
-        <p>
-          Research interests include generalization to novel classes,
-          multimodal representations, and parameter-efficient adaptation.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- ========================================================= -->
-  <!-- Publications                                               -->
-  <!-- ========================================================= -->
-
-  <section id="publications">
-
-    <h2>Publications</h2>
-
-
-    <!-- Publication -->
-
-    <div class="publication">
-
-      <img
-        src="assets/paper-plug.jpg"
-        class="publication-img"
-        alt="PLuG"
-      >
-
-      <div class="publication-content">
-
-        <div class="venue">
-          IEEE Access
-        </div>
-
-        <div class="paper-title">
-          Pairwise Logit Gating (PLuG) Attention
-        </div>
-
-        <div class="authors">
-          Authors
-        </div>
-
-        <div class="paper-links">
-          <a href="#">Paper</a>
-          ·
-          <a href="#">Code</a>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- Publication -->
-
-    <div class="publication">
-
-      <img
-        src="assets/paper-napp.jpg"
-        class="publication-img"
+        src="assets/napp.jpg"
         alt="NAPP"
       >
 
-      <div class="publication-content">
+    </div>
 
-        <div class="venue">
-          WACV 2026
-        </div>
+    <div>
 
-        <div class="paper-title">
-          NAPP
-        </div>
+      <div class="paper-title">
+        NAPP
+      </div>
 
-        <div class="authors">
-          Few-shot Learning
-        </div>
+      <div class="venue">
+        IEEE/CVF Winter Conference on Applications
+        of Computer Vision (WACV), 2026
+      </div>
 
-        <div class="paper-links">
-          <a href="#">Paper</a>
-          ·
-          <a href="#">Code</a>
-        </div>
+      <div class="authors">
+        Your Name, ...
+      </div>
 
+      <div class="paper-links">
+        <a href="#">Paper</a>
+        <a href="#">Code</a>
       </div>
 
     </div>
 
+  </div>
 
-    <!-- Publication -->
 
-    <div class="publication">
+  <!-- CEAL -->
+
+  <div class="publication">
+
+    <div class="publication-image">
 
       <img
-        src="assets/paper-ceal.jpg"
-        class="publication-img"
+        src="assets/ceal.jpg"
         alt="CEAL"
       >
 
-      <div class="publication-content">
+    </div>
 
-        <div class="venue">
-          ICASSP 2026
-        </div>
+    <div>
 
-        <div class="paper-title">
-          CEAL
-        </div>
+      <div class="paper-title">
+        CEAL
+      </div>
 
-        <div class="authors">
-          Incremental Learning
-        </div>
+      <div class="venue">
+        IEEE International Conference on
+        Acoustics, Speech and Signal Processing (ICASSP), 2026
+      </div>
 
-        <div class="paper-links">
-          <a href="#">Paper</a>
-          ·
-          <a href="#">Code</a>
-        </div>
+      <div class="authors">
+        Your Name, ...
+      </div>
 
+      <div class="paper-links">
+        <a href="#">Paper</a>
+        <a href="#">Code</a>
       </div>
 
     </div>
 
+  </div>
 
-  </section>
+
+  <!-- RoME -->
+
+  <div class="publication">
+
+    <div class="publication-image">
+
+      <img
+        src="assets/rome.jpg"
+        alt="RoME"
+      >
+
+    </div>
+
+    <div>
+
+      <div class="paper-title">
+        RoME
+        <span class="status">
+          Under Review
+        </span>
+      </div>
+
+      <div class="venue">
+        WACV 2027
+      </div>
+
+      <div class="authors">
+        Your Name, ...
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- CDA -->
+
+  <div class="publication">
+
+    <div class="publication-image">
+
+      <img
+        src="assets/cda.jpg"
+        alt="CDA"
+      >
+
+    </div>
+
+    <div>
+
+      <div class="paper-title">
+        CDA
+        <span class="status">
+          Under Review
+        </span>
+      </div>
+
+      <div class="venue">
+        NeurIPS 2026
+      </div>
+
+      <div class="authors">
+        Your Name, ...
+      </div>
+
+    </div>
+
+  </div>
+
+
+</section>
+
+
+<!-- =======================
+     PROJECTS
+======================= -->
+
+<section id="projects">
+
+  <h2>Project Experiences</h2>
+
+
+  <div class="project-row">
+
+    <div class="project-date">
+      YYYY – YYYY
+    </div>
+
+    <div>
+
+      <div class="project-title">
+        Intelligent Surveillance System for Dronebot Combat Systems
+      </div>
+
+      <div class="project-desc">
+        Developed cross-domain few-shot object detection models
+        for extremely limited-data environments and explored
+        vision-language representations for novel object recognition.
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="project-row">
+
+    <div class="project-date">
+      YYYY – YYYY
+    </div>
+
+    <div>
+
+      <div class="project-title">
+        AI-based Sewer Pipe Defect Inspection Platform
+      </div>
+
+      <div class="project-desc">
+        Developed object detection and instance segmentation models
+        for sewer pipe defect inspection and improved model performance
+        through annotation refinement, data augmentation, OCR masking,
+        and image inpainting.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
 
 </main>
 
 
 <footer>
-  © 2026 jbs371
+  © 2026 Your Name
 </footer>
+
 
 </body>
 </html>
